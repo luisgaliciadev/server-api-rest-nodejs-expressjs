@@ -16,7 +16,7 @@ app.get("/", (req, res, next) => {
       userName: "user_2",
     },
   ];
-  res.status(200).send({
+  return res.status(200).send({
     ok: true,
     message: "Users list",
     data: users,

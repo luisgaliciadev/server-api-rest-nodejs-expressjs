@@ -16,7 +16,7 @@ app.get("/", (req, res, next) => {
       message: "message_2",
     },
   ];
-  res.status(200).send({
+  return res.status(200).send({
     ok: true,
     message: "Messages list",
     data: messages,
@@ -25,7 +25,7 @@ app.get("/", (req, res, next) => {
 
 app.post("/", (req, res, next) => {
   const message = req.body;
-  res.status(200).send({
+  return res.status(200).send({
     ok: true,
     message: "Message",
     data: message,
